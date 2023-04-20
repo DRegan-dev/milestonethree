@@ -31,4 +31,11 @@ for turn in range(6):
 
     if guess_row < 0 or guess_row >= size or guess_col < 0 or guess_col >= size:
         print("Oops, you hit land")
-
+        continue
+    if guess_row == ship_row and guess_col == ship_col:
+        print("Bullseye!! You sank my Battleship")
+    else:
+        print("Missed me!!")
+        board[guess_row][guess_col] == "X":
+    print(board(board))
+    
