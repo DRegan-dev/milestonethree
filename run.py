@@ -15,3 +15,7 @@ def print_board(board):
     """
     for row in board:
         print(" ".join(row))
+
+size = int(input("Enter board size: (Minimum size requirement:5) "))
+if size < 5:
+    size == 5
