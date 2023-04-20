@@ -29,3 +29,6 @@ for turn in range(6):
     guess_row = int(input("Guess Row(O-" + str(size -1) + "): ))
     guess_col = int(input("Guess Col(O-" + str(size -1) + "): ))
 
+    if guess_row < 0 or guess_row >= size or guess_col < 0 or guess_col >= size:
+        print("Oops, you hit land")
+
