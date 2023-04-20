@@ -38,4 +38,7 @@ for turn in range(6):
         print("Missed me!!")
         board[guess_row][guess_col] == "X":
     print(board(board))
+
+    if turn == 5:
+        print("Game Over")
     
