@@ -19,3 +19,7 @@ def print_board(board):
 size = int(input("Enter board size: (Minimum size requirement:5) "))
 if size < 5:
     size == 5
+
+board = create_board(size)
+battleship_row = randint(0, size - 1)
+battleship_col = randint(0, size - 1)
