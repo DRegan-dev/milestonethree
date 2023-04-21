@@ -10,6 +10,7 @@ def create_board(b_size):
     return board
 
 print( "Welcome to Battleship!! \n")
+print("Please input your guess using numbers only. Press enter to submit your guess.")
 
 
 
