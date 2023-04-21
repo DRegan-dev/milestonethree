@@ -47,9 +47,6 @@ for turn in range(0, 5):
     if guess_row < 0 or guess_row >= size or guess_col < 0 or guess_col >= size:
         print("Oops, you hit land")
         continue
-    elif guess_row == battleship_row and guess_col == battleship_col:
-        print("Bullseye!! You sank my Battleship")
-        break
     else:
         print("Missed me!!")
     
@@ -63,6 +60,9 @@ for turn in range(0, 5):
              print("You're getting colder")  
         board[guess_row][guess_col] = "X"    
 
-else:
-    print("Game Over")
+if guess_row == battleship_row and guess_col == battleship_col:
+    print("Bullseye!! You sank my battleship")
+    
+elif turn == 4:
+    print("Game Over. You have been Destroyed")
     
