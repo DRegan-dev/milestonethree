@@ -10,7 +10,7 @@ def create_board(b_size):
     return board
 
 print( "Welcome to Battleship!! \n")
-print("Please input your guess using numbers only. Press enter to submit your guess.")
+print("Please input your guess using numbers only. Press enter to submit your guess. /n")
 
 
 
@@ -32,7 +32,7 @@ def get_input(prompt, minimum = None):
         except ValueError:
             print("You must enter a number.")
 
-size = int(input("Enter board size: (Minimum size requirement: 5) "))
+size = int(input("Enter board size: (Minimum size requirement: 5) \n "))
 if size < 5:
     size = 5
 
@@ -42,8 +42,8 @@ battleship_col = randint(0, size - 1)
 
 for turn in range(0, 5):
     print("Turn", turn + 1)
-    guess_row = get_input("Guess Row(O-" + str(size -1) + "): ")
-    guess_col = get_input("Guess Col(O-" + str(size -1) + "): ")
+    guess_row = get_input("Guess Row(O-" + str(size -1) + "): /n")
+    guess_col = get_input("Guess Col(O-" + str(size -1) + "): /n")
 
     if guess_row < 0 or guess_row >= size or guess_col < 0 or guess_col >= size:
         print("Oops, you hit land")
