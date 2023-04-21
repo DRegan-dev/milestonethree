@@ -1,31 +1,41 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# BattleShips
+This is a Python implementation of the classic Battleships game. It creates a square game board of user-defined size and places a battleship on that board. 
+The user then has 5 attempts to hit the battleship by input the row and column at which they would like to shoot. The program then provides feedback on each shot as to whether it was a hit or a miss and whether the guess is getting warmer or colder if it is near the battleship location. 
 
-Welcome DRegan-dev,
+The code makes use of functions tocreate a game board and get input from the user. It also uses a loop to allow the user to make multiple guesses as to the location of the battleship and includes conditional statements to check if the user has sunk the battelship or used up all of their turns. The code could be further improved by add error handling to handle unexpected user input and providing addition feedback to help the user better locate the battleship.
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **August 17, 2021**
+## Features
 
-## Reminders
+1. create_board() creates a two-dimensional list to represent the game board.
+2. print_board() prints the game board to the terminal.
+3. get_input() prompts the user to enter input and checks if it is a valid number.
+4. The user is prompted to input the size of the board and the game starts.
+5. A battleship is placed randomly on the board.
+6. The player has 5 turns to guess the location of the battleship.
+7. The program checks if the guess is a hit or a miss and gives appropriate feedback.
+8. If the guess is a hit, the program provides additional feedback about the proximity of the battleship.
+9. The game ends after 5 turns or when the battleship is sunk.
 
-* Your code must be placed in the `run.py` file
-* Your dependencies must be placed in the `requirements.txt` file
-* Do not edit any of the other files or your code may not deploy properly
+## Testing
 
-## Creating the Heroku app
+I have conducted tests through python tutor as well as manual testing and while some features work as intened there are a few that dont and have been identified as:
+  
+          Firstly, the game board's creation and display appear to work correctly, as the create_board() and print_board() functions are defined and called in the code.
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+However, there are several issues with the game's logic. For instance, the game should end once the user sinks the battleship or exhausts their turns, but there is no explicit check for this condition in the code. Additionally, the code that checks whether the user is getting closer or farther from the battleship seems to have some typos and formatting errors. Finally, there is no explicit check to prevent the user from guessing the same position twice.
 
-1. `heroku/python`
-2. `heroku/nodejs`
+Overall, while some features of the project appear to work as intended, there are some issues with the game's logic that could impact the game's behavior.
 
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
+## Unfixed bugs
 
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+The issue with the logic of the game not checking to see if the battleship has been sunk and then ending the game if it was, has not been fixed but will be in a future iteration. 
 
-Connect your GitHub repository and deploy as normal.
+## Deployment
 
-## Constraints
+This project was deployed using heroku. I linked GitHub to heroku added the relevent config vars and build packs. I enabled automatic deploys and deployed the project. 
 
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
+# Credits
 
------
-Happy coding!
+The inspiration for this project as a whole in the format it is in came from https://coderspacket.com/battleship-game-in-python
+
+Additional information on loops came from stack overflow. 
